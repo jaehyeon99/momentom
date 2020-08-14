@@ -1,4 +1,14 @@
-h1
+body{
+    background-color: #ecf0f1;
+}
+body{
+    color: #34495e;
+}
+.form,
+.greeting
 {
-    color:gray;
+    display:none;
+}
+.showing{
+    display: block;
 }
