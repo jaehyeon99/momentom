@@ -1,4 +1,4 @@
-# A clone of the chrome app momentum((https://momentumdash.com/))
+## A clone of the chrome app momentum((https://momentumdash.com/)
 ### Using JavaScript
 #### completed function
 - [x] Save Nickname
