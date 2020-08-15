@@ -8,16 +8,17 @@ function filterFn(toDo){
 
 }
 
-const toDos = [];
+let toDos = [];
 
 function deleteToDo(event){
     const btn = event.target;
     const li = btn.parentNode;
     toDoList.removeChild(li);
     const cleanTodos = toDos.filter(function(toDo) {
-        return toDo.id !== li.id;
+        return toDo.id !== parseInt(li.id);
     });
-
+    toDos = cleanTodos
+    saveToDos();
 
 }
 
@@ -30,7 +31,8 @@ function paintTODo(text){
     const delBtn = document.createElement("button");
     const span = document.createElement("span");
     const newId = toDos.length +1;
-    delBtn.innerText = "✘";
+    delBtn.innerText = "❌";
+    delBtn.className = "toDo__button";
     delBtn.addEventListener("click",deleteToDo);
     span.innerText = text
     li.appendChild(span);
